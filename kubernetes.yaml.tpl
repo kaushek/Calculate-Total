@@ -15,32 +15,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shopping-cart-app
+  name: calculate-total-app
   labels:
-    app: shopping-cart-app
+    app: calculate-total-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: shopping-cart-app
+      app: calculate-total-app
   template:
     metadata:
       labels:
-        app: shopping-cart-app
+        app: calculate-total-app
     spec:
       containers:
-      - name: hello-cloudbuild
-        image: gcr.io/GOOGLE_CLOUD_PROJECT/shopping-cart-app:COMMIT_SHA
+      - name: calculatetotal
+        image: gcr.io/GOOGLE_CLOUD_PROJECT/calculate-total-app:COMMIT_SHA
         ports:
         - containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: shopping-cart-app
+  name: calculate-total-app
 spec:
   selector:
-    app: shopping-cart-app
+    app: calculate-total-app
   ports:
   - protocol: TCP
     port: 80
