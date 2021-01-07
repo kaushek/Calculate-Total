@@ -29,7 +29,7 @@ spec:
         app: calculate-total-app
     spec:
       containers:
-      - name: calculatetotal
+      - name: calculate-total-app
         image: gcr.io/GOOGLE_CLOUD_PROJECT/calculate-total-app:COMMIT_SHA
         ports:
         - containerPort: 8080
