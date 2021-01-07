@@ -101,7 +101,8 @@ app.listen(port, function() {
     
 
 var clientServerOptions = {
-   uri: 'http://35.193.132.159/',
+  // uri: 'http://35.193.132.159/',
+   uri: 'https://kaushekkr-eval-test.apigee.net/shopping-cart-app?apikey=J4CTGobjgB47Io6k6lqSAPZUJmU0SGsl'
    body: JSON.stringify(result),
    method: 'POST',
    headers: {
