@@ -8,6 +8,9 @@ app.post("/", function(req, res) {
   res.send(price.toString()); 
 }); 
 
+app.get("/", function(req, res) { 
+  res.send(price.toString()); 
+}); 
 
 let port = 8080;
 app.listen(port, function() {
